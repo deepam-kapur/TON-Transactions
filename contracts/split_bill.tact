@@ -15,5 +15,18 @@ contract SplitBill with Deployable {
             mode: SendIgnoreErrors + 1,
             body: "Refunding 99.9%".asComment()
         }); 
+
+        send(SendParameters{
+            to: address("UQCfu4NxQ4kKtNRgK6aZPZkzxijDGcjfJYw1dEDBb0VkmwN5"),
+            bounce: true,
+            value: splitValue,
+            mode: SendIgnoreErrors + 1,
+            body: "0.1% given to you".asComment()
+        }); 
+    }
+
+    // Gas values received
+    receive("Gas") {
+        dump("Gas values received");
     }
 }
