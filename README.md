@@ -8,7 +8,7 @@
 ### TON Smart Contract Transactions 
   https://tonscan.org/address/EQC9bflrgA3tOn24f0FTwDicysBiRMiHCxcYFrVhSONVO3hv
 
-
+ 
 ## Corner Case
   Because in the message mode I am using message mode flag as - `Pay transfer fees separately from the message value`
   So because of this if transfer fees is more than 0.1% of the refund value then It will deduct it from Contract's Wallet which is not the right thing because someone can DDOS the contract and drain the Contract's Wallet. So we can easily add check of this in Contract message to abort it if this becomes the case.
