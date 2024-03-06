@@ -1,6 +1,6 @@
 import { CompilerConfig } from '@ton/blueprint';
 
 export const compile: CompilerConfig = {
-    lang: 'func',
-    targets: ['contracts/split_bill.fc'],
+    lang: 'tact',
+    target: 'contracts/split_bill.tact',
 };

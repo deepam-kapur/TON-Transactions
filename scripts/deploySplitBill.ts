@@ -1,13 +1,22 @@
 import { toNano } from '@ton/core';
 import { SplitBill } from '../wrappers/SplitBill';
-import { compile, NetworkProvider } from '@ton/blueprint';
+import { NetworkProvider } from '@ton/blueprint';
 
 export async function run(provider: NetworkProvider) {
-    const splitBill = provider.open(SplitBill.createFromConfig({}, await compile('SplitBill')));
+    const splitBill = provider.open(await SplitBill.fromInit());
 
-    await splitBill.sendDeploy(provider.sender(), toNano('0.05'));
+    await splitBill.send(
+        provider.sender(),
+        {
+            value: toNano('0.1'),
+        },
+        {
+            $$type: 'Deploy',
+            queryId: 0n,
+        }
+    );
+
+    console.log('SplitBill Contract Address - ', splitBill.address);
 
     await provider.waitForDeploy(splitBill.address);
-
-    // run methods on `splitBill`
 }
