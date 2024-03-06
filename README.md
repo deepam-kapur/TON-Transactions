@@ -1,12 +1,12 @@
 # TON-Transactions
 
 ### TON Smart Contract Address (Mainnet)
-  `EQC9bflrgA3tOn24f0FTwDicysBiRMiHCxcYFrVhSONVO3hv`
+  `EQAlXGyEPdsCZON7BjVqizB0k6Kvs84o5ttDJ_jpnojeQ_Cm`
   
    Note: Required Message `"Refund 99.9%"`
    
 ### TON Smart Contract Transactions 
-  https://tonscan.org/address/EQC9bflrgA3tOn24f0FTwDicysBiRMiHCxcYFrVhSONVO3hv
+  https://tonscan.org/address/EQAlXGyEPdsCZON7BjVqizB0k6Kvs84o5ttDJ_jpnojeQ_Cm
 
  
 ## Corner Case
